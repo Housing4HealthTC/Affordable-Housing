@@ -1,0 +1,18 @@
+<html><head>
+<style type="text/css">
+.css3gradient{width:3000px;height:3000px;
+ background-color:#3e6070;
+ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#3e6070, endColorstr=#207da8);
+ background-image:-moz-linear-gradient(left, #3e6070 4%, #207da8 10%);
+ background-image:-webkit-linear-gradient(left, #3e6070 4%, #207da8 10%);
+ background-image:-ms-linear-gradient(left, #3e6070 4%, #207da8 10%);
+ background-image:linear-gradient(left, #3e6070 4%, #207da8 10%);
+ background-image:-o-linear-gradient(left, #3e6070 4%, #207da8 10%);
+ background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(4%,#3e6070), color-stop(10%,#207da8));}
+</style>
+</head><body>
+<div class="css3gradient"><b>Here is the result</b></div>
+</body>
+</html>body {
+
+}
