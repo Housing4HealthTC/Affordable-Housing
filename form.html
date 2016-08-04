@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+              <meta charset="utf-8">
+ 
+              <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+              Remove this if you use the .htaccess -->
+              <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 
+              <title>form2</title>
+              <meta name="description" content="">
+              <meta name="author" content="Jeremy Wolf">
+ 
+              <meta name="viewport" content="width=device-width; initial-scale=1.0">
+ 
+              <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+              <link rel="shortcut icon" href="/favicon.ico">
+              <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+       </head>
+ 
+       <body>
+              <div>
+                     <header>
+                           <h1>Add a Unit</h1>
+                     </header>
+                     <nav>
+                           <p>
+                                  <a href="my-handling-unit-form-page">Add a new unit</a>
+                           </p>
+                           <form action = "/my-handling-unit-form-page" method = "post">
+                                  <div>
+                                         <label for = "Bedrooms"> Number of Bedrooms: </label>
+                                         <input type = "Integer" id = "Bedrooms" name = "Bedrooms" />
+                                  </div>
+                                  <div>
+                                         <label for = "Bathrooms"> Number of Bathrooms: </label>
+                                         <input type ="Integer" id = "Bathrooms" name = "Bathrooms" />
+                                  </div>
+                                  <div>
+                                         <label for = "sqrFT"> Square footage:</label>
+                                         <input type ="Integer" id = "sqrFT" name = "sqrFT" />
+                                  </div>
+                                    <div>
+                                         <label for = "Rental_Price"> Rental Price:</label>
+                                         <input type = "Text" id - "Rental_Price" name = "Rental_Price" />
+                                  </div>
+                                  
+                                  <div>
+                                         <label for = "Date_Avaliable">  Date Unit is Avaliable:</label>
+                                         <input type = "date" id = "Date_Avaliable" name = "Date_Avaliable" />
+                                  </div>
+                                  
+                                  <div>
+                                         <label for = "Deposit">  Security Deposit:</label>
+                                         <input type = "Integer" id = "Deposit" name = "Deposit" />
+                                  </div>
+                                  
+                                  <div>
+                                         <label for = "Laundry">  Laundry in unit (Y or N):</label>
+                                         <input type = "text" id = "Laundry" name = "Laundry" />
+                                  </div>
+                                  <div class = "button">
+                                         <button type = "submit"> Add New Unit</button>
+                                  </div>
+                           </form>
+                     </nav>
+ 
+                     <div>
+ 
+                     </div>
+ 
+                     <footer>
+                           <p>
+                                  &copy; Copyright  by wolfjs
+                           </p>
+                     </footer>
+              </div>
+       </body>
+</html>
+ 
