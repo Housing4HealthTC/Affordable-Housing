@@ -3,9 +3,8 @@
 include('LandlordSession.php');
 $unit_query_string = sprintf("SELECT * FROM UNIT WHERE COMPLEX_NAME='%s';", $current_complex);
 //$string = "SELECT * FROM UNIT WHERE COMPLEX_NAME= 'Salmon Run';";
-        
-$result_for_units = mysqli_query($conn, $unit_query_string);
 
+$result_for_units = mysqli_query($conn, $unit_query_string);
 ?>
 <!DOCTYPE html>
 <!--
@@ -67,44 +66,64 @@ Use the php tags and an echo call before hand to access the variables.
                     <b id="welcome">Welcome : <i><?php echo $current_complex; ?></i></b>
 
                     <table width="100%" border="0" cellspacing="0" cellpadding="15">
+                        <tr>
+                            <th>Number of Beds</th>
+                            <th>Number of Baths</th>
+                            <th>Sq ft</th>
+                            <th>Rental Price</th>
+                            <th>Date Avaliable</th>
+                            <th>Lease Length</th>
+                            <th>Deposit</th>
+                            <th>Edit Unit</th>
+                        </tr>
+
+
                         <?php
                         if ($result_for_units) {
-                            
-                            while ($current_unit = mysqli_fetch_assoc($result_for_units)){
-                            
-                            echo $current_unit["NUM_BED"];
+
+                            while ($current_unit = mysqli_fetch_assoc($result_for_units)) {
+                                ?>
+                                <tr>
+                                    <td> <?php echo $current_unit["NUM_BED"]; ?> </td>
+                                    <td> <?php echo $current_unit["NUM_BATH"]; ?> </td>
+                                    <td> <?php echo $current_unit["SQ_FT"]; ?> </td>
+                                    <td> <?php echo $current_unit["PRICE"]; ?> </td>
+                                    <td> <?php echo $current_unit["DATE_AVL"]; ?> </td>
+                                    <td> <?php echo $current_unit["LEASE_TYPE"]; ?> </td>
+                                    <td> <?php echo $current_unit["DEPOSITE"]; ?> </td>
+                                    <td> Add Link </td>
+                                </tr>
+
+                                <?php
                             }
                         }
-                   
-                            ?>
+                        ?>
 
                     </table>
                 </div>
-
             </div>
-        </div>
 
-        <div id="footer">
-            <div class="left_footer">
+            <div id="footer">
+                <div class="left_footer">
+                    <ul class="footer_list">
+                        <li><a href="./HousingResources.html">Housing Services</a></li>
+                        <li><a href="./HousingSearch.html">Affordable Housing Search</a></li>
+                    </ul>
+                </div>
+                <div class="right_footer">
+                    <ul class="footer_list">
+                        <li><a href="./WhyAffordableHousing.html">Why Affordable Housing?</a></li>
+                        <li><a href="LandlordLiasonProgram.html">Landlord Liason Program</a></li>
+                        <li><a href="OtherCommunityResources"> Community Resources</a></li>
+                    </ul>
+                </div>
                 <ul class="footer_list">
-                    <li><a href="./HousingResources.html">Housing Services</a></li>
-                    <li><a href="./HousingSearch.html">Affordable Housing Search</a></li>
+                    <li><a href="AffordableHousing.html">What is Sub Housing</a></li>
+                    <li><a href="copyrightpage.html">Copyright</a></li>
+                    <li><a href = "sitemap.html">Sitemap</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="right_footer">
-                <ul class="footer_list">
-                    <li><a href="./WhyAffordableHousing.html">Why Affordable Housing?</a></li>
-                    <li><a href="LandlordLiasonProgram.html">Landlord Liason Program</a></li>
-                    <li><a href="OtherCommunityResources"> Community Resources</a></li>
-                </ul>
-            </div>
-            <ul class="footer_list">
-                <li><a href="AffordableHousing.html">What is Sub Housing</a></li>
-                <li><a href="copyrightpage.html">Copyright</a></li>
-                <li><a href = "sitemap.html">Sitemap</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
         </div>
-
     </body>
 </html>
