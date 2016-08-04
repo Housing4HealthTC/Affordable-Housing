@@ -100,6 +100,8 @@ Use the php tags and an echo call before hand to access the variables.
                         ?>
 
                     </table>
+                    <h4>Account Informatica</h4>
+                    
                 </div>
             </div>
 
